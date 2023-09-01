@@ -2,6 +2,26 @@
 @import "fonts";
 @import "typography";
 
+@import "./header.scss";
+@import "./slider.scss";
+@import "./footer.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Inter, sans-serif;
+}
+
 body {
-  background: $c-gray;
+  margin: 0;
+  background: $c-main;
+}
+
+.button {
+  background: $bgc-button;
+  border: none;
+  color: $c-white;
+  cursor: pointer;
 }

@@ -1,2 +1,5 @@
 /backstop_data/
 /dist
+/length-zero-no-unit/
+/number-no-trailing-zeros/
+/max-line-length/

@@ -1,0 +1,141 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 17px;
+
+  background: linear-gradient(0deg, rgba(22, 26, 22, 0) 0%, #161a16 100%);
+
+  &__acceder {
+    background: transparent;
+    border: none;
+    color: $c-white;
+    cursor: pointer;
+    padding-right: 19px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+  }
+
+  &__registrate {
+    width: 130px;
+    height: 30px;
+    border-radius: 15px;
+
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 2px 2px 12px rgb(49, 160, 49);
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    top: 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 215px;
+    height: 86px;
+    background-color: $c-white;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 1);
+    border-radius: 0 0 25px 25px;
+    z-index: 1;
+  }
+
+  &__banner-text {
+    color: $c-main;
+    font-style: italic;
+    font-weight: 900;
+    margin: 0;
+
+    &--top {
+      font-size: 20px;
+    }
+
+    &--bottom {
+      font-size: 28px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .header {
+      height: auto;
+      position: relative;
+
+      display: flex;
+      justify-content: space-around;
+      padding: 17px;
+
+      background: linear-gradient(0deg, rgba(22, 26, 22, 0.00) 0%, #161a16 100%);
+
+      &_container {
+        padding: 30px;
+        width: auto;
+      }
+
+      &__wrapper {
+        height: 100%;
+        position: static;
+      }
+
+      &__acceder {
+        display: none;
+      }
+
+      &__registrate {
+        width: 130px;
+        height: 30px;
+        border-radius: 15px;
+
+        transition: all 0.3s;
+
+        &:hover {
+          box-shadow: 2px 2px 12px rgb(49, 160, 49);
+        }
+      }
+
+      &__banner {
+        position: absolute;
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        width: 215px;
+        height: 26px;
+        background-color: $c-white;
+        box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.60);
+        border-radius: 0px 0px 15px 15px;
+        z-index: 1;
+      }
+
+      &__banner-text {
+        color: $c-main;
+        font-style: italic;
+        font-weight: 900;
+        margin: 0;
+
+        &--top {
+          font-size: 12px;
+        }
+
+        &--bottom {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

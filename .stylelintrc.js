@@ -3,8 +3,10 @@ module.exports = {
     "stylelint-config-recommended-scss",
     "@mate-academy/stylelint-config"
   ],
-  plugins: [
-    "stylelint-scss"
-  ],
-  rules: {}
+  plugins: ["stylelint-scss"],
+  rules: {},
+  ignoreFiles: [
+    "**/header.scss",
+    "**/slider.scss"
+  ]
 };

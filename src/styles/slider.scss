@@ -1,0 +1,236 @@
+.slider {
+  position: relative;
+  padding-top: 84px;
+  overflow-x: hidden;
+
+  &__line {
+    transition: all 0.5s;
+  }
+
+  &__slide {
+    padding-left: 400px;
+  }
+
+  &__title {
+    padding-bottom: 60px;
+  }
+
+  &__slide-title {
+    color: $c-white;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.60);
+    margin: 0;
+
+    font-style: italic;
+    font-weight: 900;
+
+    &--top {
+      font-size: 44px;
+    }
+
+    &--center {
+      font-size: 44px;
+      padding-left: 74px;
+    }
+
+    &--bottom {
+      font-size: 56px;
+    }
+  }
+
+  &__slide-subtitle-text {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    color: $c-white;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.60);
+  }
+
+  &__button {
+    position: relative;
+    overflow-x: hidden;
+
+    width: 430px;
+    height: 80px;
+    border-radius: 40px;
+    transition: all 0.3s;
+
+    font-size: 36px;
+    font-weight: 600;
+
+    margin-bottom: 124px;
+
+    &:hover {
+      box-shadow: 2px 2px 12px rgb(49, 160, 49);
+    }
+  }
+
+  .button .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-45deg);
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 3s infinite linear;
+  }
+
+  @keyframes flareAnimation {
+    0% {
+      left: -150%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 10px;
+
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__pagination-point {
+    background-color: #d9d9d9;
+    height: 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+
+    &--selected {
+      background: $bgc-button;
+    }
+  }
+}
+
+#slide_1 {
+  background-image: 
+    url("../images/banner-dark-frame.png"),
+    url("../images/banner-first-slide-bg.png");
+  height: 720px;
+}
+
+#slide_2 {
+  background-image:
+    url("../images/banner-dark-frame.png"),
+    url("../images/sec-slide-bg.png");
+  height: 720px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  transform: translateX(100%);
+  transition: transform 0.3s;
+
+  &:target {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .slider {
+    &__slide {
+      width: 100%;
+      padding-left: 450px;
+    }
+
+    &__line {
+      position: relative;
+    }
+
+    &__title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      padding-bottom: 24px;
+    }
+
+    &__slide-title {
+      color: $c-white;
+      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.60);
+      margin: 0;
+
+      font-style: italic;
+      font-weight: 900;
+
+      &--top {
+        font-size: 24px;
+      }
+
+      &--center {
+        font-size: 24px;
+        padding-left: 74px;
+      }
+
+      &--bottom {
+        font-size: 32px;
+      }
+    }
+
+    &__slide-subtitle-text {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 120%;
+      color: $c-white;
+      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.60);
+    }
+
+    &__button {
+      position: relative;
+      overflow-x: hidden;
+
+      width: 264px;
+      height: 48px;
+      border-radius: 40px;
+      transition: all 0.3s;
+
+      font-size: 22px;
+      font-weight: 600;
+
+      margin-bottom: 124px;
+
+      &:hover {
+        box-shadow: 2px 2px 12px rgb(49, 160, 49);
+      }
+    }
+  }
+
+  #slide_1 {
+    background-image:
+      url("../images/banner-dark-frame-mobile.png"),
+      url("../images/banner-bg-firstslide-mobile.png");
+
+    background-position: center center;
+    background-size: cover;
+  }
+
+  #slide_2 {
+    background-image:
+      url("../images/banner-dark-frame-mobile.png"),
+      url("../images/banner-bg-secondslide-mobile.png");
+
+    background-position: center center;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    transform: translateX(100%);
+    transition: transform 0.3s;
+
+    &:target {
+      transform: translateX(0);
+    }
+  }
+}
