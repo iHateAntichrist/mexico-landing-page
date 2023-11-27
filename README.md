@@ -1,5 +1,5 @@
 # Mexico Landing Page
-Demo: https://ihateantichrist.github.io/mexico-landing-page/
+Demo: https://kyserf.github.io/mexico-landing-page/
 
 This is a landing page for a website promoting betting and online gaming in Mexico.
 
